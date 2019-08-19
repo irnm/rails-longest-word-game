@@ -1,0 +1,13 @@
+<h1>RESULT</h1>
+
+<% if @grid == false %>
+<p><%= "#{@word} can't be built out of the original grid. Loser." %></p>
+
+<% elsif @english == false %>
+<p><%= "#{@word} is valid according to the grid, but is not a valid English word. Loser" %></p>
+
+<% elsif @grid == true && @english == true %>
+<p><%= "Congratulation! #{@word} is a valid English word." %></p>
+<% end %>
+
+<%= link_to "Play again", "/games/new" %>
